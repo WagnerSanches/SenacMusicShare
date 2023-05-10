@@ -1,0 +1,37 @@
+<main>
+    <div class="form">
+        <div>
+            <p>Digite o nome da musica</p>
+            <input type="text" [(ngModel)]="meuInput" (ngModelChange)="onInputChanged()">
+        </div>
+        <div>
+            <p>Adicione um comentario</p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button>Compartilhar musica</button>
+        </div>
+    </div>
+    <div *ngFor="let music of musics">
+
+        <div class="list">
+            <div>
+                <img [src]="music.image" alt="" width="100px">
+            </div>
+            <div>
+                <h3>{{ music.nameSong }}</h3>
+                <p>{{ music.artist }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="list" >
+        <div>
+            <img src="https://i.scdn.co/image/ab67616d0000b2733acbe79d4a2013021b607a84" alt="" width="100px">
+        </div>
+        <div>
+            <h3>abcdefu (angrier)</h3>
+            <p>GAYLE</p>
+        </div>
+    </div> -->
+</main>
